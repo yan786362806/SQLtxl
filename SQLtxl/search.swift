@@ -1,23 +1,20 @@
 //
-//  delete.swift
+//  search.swift
 //  SQLtxl
 //
-//  Created by 20141105044y on 16/7/8.
+//  Created by 20141105044y on 16/7/11.
 //  Copyright © 2016年 20141105044y. All rights reserved.
 //
 
 import UIKit
 
-class delete: UIViewController {
+class search: UIViewController {
     
     var db:SQLiteDB!
     
+    @IBOutlet weak var text3: UITextField!
     
-    @IBOutlet weak var text1: UITextField!
-    
-    
-    @IBOutlet weak var text2: UITextField!
-    
+    @IBOutlet weak var text4: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,28 +26,23 @@ class delete: UIViewController {
         //如果有数据则加载
         //initUser()
     }
-    //点击保存
     
-    @IBAction func deletename(sender: AnyObject) {
-        deleteuser()
+    @IBAction func srarchname(sender: AnyObject) {
+        sn()
     }
-    func deleteuser(){
-        let value=text1.text!
-        let sql = "delete from tuser where mobile='\(value)' "
-        let result = db.execute(sql)
-        print(result)
-    }
-
-    @IBAction func deletenum(sender: AnyObject) {
-        deletenum()
-    }
-    func deletenum(){
-        let value1=text2.text!
-        let sql = "delete from tuser where mobile='\(value1)' "
-        let result = db.execute(sql)
-        print(result)
-    }
+    func sn(){
     
+        text4.text=""
+        let a=text3.text!
+        let data = db.query("select * from tuser where='\(a)'")
+        for (var i=0;i<data.count;i++)
+        {
+        let user =data[i]}
+        text4.text!+="姓名："+String(user["uname"]!)+)
+    
+    
+    
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
