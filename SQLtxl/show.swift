@@ -1,3 +1,4 @@
+
 //
 //  search.swift
 //  SQLtxl
@@ -8,13 +9,21 @@
 
 import UIKit
 
-class search: UIViewController {
+class show: UIViewController {
     
     var db:SQLiteDB!
     
-    @IBOutlet weak var text3: UITextField!
+    @IBAction func qingchu(sender: AnyObject) {
+        text5.text=""
+    }
     
-    @IBOutlet weak var text4: UITextView!
+    @IBAction func qingkong(sender: AnyObject) {
+        let sql = "delete from tuser"
+        let result = db.execute(sql)
+        print(result)
+    }
+    
+    @IBOutlet weak var text5: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,24 +36,20 @@ class search: UIViewController {
         //initUser()
     }
     
-    @IBAction func srarchname(sender: AnyObject) {
-        sn()
+    @IBAction func showuser(sender: AnyObject) {
+        su()
     }
-    func sn(){
-    
-        text4.text=""
-        let a=text3.text!
-        let data = db.query("select * from tuser where uname='\(a)'")
-        for (var i=0;i<data.count;i++)
+    func su(){
+        let data = db.query("select * from tuser")
+        for var j=0;j<data.count;j++
         {
-        let user = data[i]
-        text4.text!+="姓名: "+String(user["uname"]!)+"电话: "+String(user["mobile"]!)+"邮箱: "+String(user["email"]!)+"地址: "+String(user["address"]!)+"\n"
+            let user = data[j]
+            text5.text!+="姓名: "+String(user["uname"]!)+"电话: "+String(user["mobile"]!)+"邮箱: "+String(user["email"]!)+"地址: "+String(user["address"]!)+"\n"
         }
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
 }

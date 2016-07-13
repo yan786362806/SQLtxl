@@ -25,7 +25,7 @@ class delete: UIViewController {
         //获取数据库实例
         db = SQLiteDB.sharedInstance()
         //如果表还不存在则创建表（其中uid为自增自减）
-        db.execute("create table if not exists tuser(uid integer primary key,uname varchar(20),mobile varchar(20),adress varchar(20))")
+        db.execute("create table if not exists tuser(uid integer primary key,uname varchar(20),mobile varchar(20),email varchar(20),address varchar(20))")
         //如果有数据则加载
         //initUser()
     }

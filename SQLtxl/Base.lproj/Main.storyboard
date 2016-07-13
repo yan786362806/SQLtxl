@@ -44,8 +44,20 @@
                                     <segue destination="sR9-mt-dme" kind="modal" id="A6W-PU-5S4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sp8-v7-j5u">
+                                <rect key="frame" x="123" y="256" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="显示联系人"/>
+                                <connections>
+                                    <segue destination="9tr-7S-ZpP" kind="modal" id="iCO-W8-9E3"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="u=1538967743,1926179619&amp;fm=21&amp;gp=0.jpg" id="DMa-qh-tVC">
+                                <rect key="frame" x="40" y="323" width="240" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -96,8 +108,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="u=165953114,3626923254&amp;fm=21&amp;gp=0.jpg" id="bDs-PJ-bY8">
+                                <rect key="frame" x="40" y="339" width="222" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.48681789636611938" green="0.91241222620010376" blue="0.49585187435150146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="text1" destination="4St-ZV-PCG" id="Do0-zu-i6z"/>
@@ -119,7 +135,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wIc-e0-j5M">
                                 <rect key="frame" x="245" y="510" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="返回"/>
+                                <state key="normal" title="返回">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="modal" id="cMo-IT-lu8"/>
                                 </connections>
@@ -127,7 +145,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pGp-ai-jul">
                                 <rect key="frame" x="47" y="69" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="按姓名查询"/>
+                                <state key="normal" title="按姓名查询">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="srarchname:" destination="sR9-mt-dme" eventType="touchUpInside" id="qvh-ev-gsw"/>
                                 </connections>
@@ -145,8 +165,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="u=3454924501,3224996168&amp;fm=21&amp;gp=0.jpg" id="HYh-xw-TJ9">
+                                <rect key="frame" x="58" y="327" width="205" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.59760672459999997" green="0.55682571240000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="text3" destination="eep-zv-UkA" id="Zfz-74-ahA"/>
@@ -155,7 +179,74 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vxk-ZM-rvV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="237" y="1013"/>
+            <point key="canvasLocation" x="228" y="1013"/>
+        </scene>
+        <!--Show-->
+        <scene sceneID="UjH-qe-ifF">
+            <objects>
+                <viewController id="9tr-7S-ZpP" customClass="show" customModule="SQLtxl" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BaB-UX-Ti6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="grn-th-R4Z">
+                                <rect key="frame" x="262" y="509" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="返回"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="IxC-7t-bks"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nSt-Fz-f7O">
+                                <rect key="frame" x="29" y="59" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="显示所有联系人">
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showuser:" destination="9tr-7S-ZpP" eventType="touchUpInside" id="ae0-fY-2Nd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MW7-sV-B9w">
+                                <rect key="frame" x="254" y="59" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="清除"/>
+                                <connections>
+                                    <action selector="qingchu:" destination="9tr-7S-ZpP" eventType="touchUpInside" id="LEz-jO-2Dg"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="IuT-Mc-8tA">
+                                <rect key="frame" x="40" y="153" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Nhm-Sh-8Pn">
+                                <rect key="frame" x="108" y="304" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="清空所有联系人">
+                                    <color key="titleColor" red="0.0049154972657561302" green="0.0012092370307072997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="qingkong:" destination="9tr-7S-ZpP" eventType="touchUpInside" id="BkT-yY-ofD"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="u=4264565251,3634997271&amp;fm=21&amp;gp=0.jpg" id="2pO-T5-w4D">
+                                <rect key="frame" x="40" y="353" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.41469452649999999" blue="0.50020042440000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="text5" destination="IuT-Mc-8tA" id="G1R-Lm-td8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ncq-Cj-4l6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-514" y="919"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jGM-CJ-Gdi">
@@ -179,14 +270,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9SB-Zp-I2L">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邮箱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9SB-Zp-I2L">
                                 <rect key="frame" x="42" y="202" width="34" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邮箱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ged-D1-zsl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ged-D1-zsl">
                                 <rect key="frame" x="42" y="267" width="34" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -240,14 +331,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="u=1375647250,2440653288&amp;fm=21&amp;gp=0.jpg" id="l0p-KN-X5W">
+                                <rect key="frame" x="42" y="328" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0092555060982704163" green="0.99492889642715454" blue="0.63644963502883911" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="address" destination="lCM-h5-L9T" id="sQg-vd-wF3"/>
-                        <outlet property="email" destination="pW5-sc-ebS" id="VLC-yK-2b9"/>
-                        <outlet property="name" destination="3jO-mk-OcB" id="huH-zH-XoL"/>
-                        <outlet property="phone" destination="005-Mu-HiQ" id="pzA-Lp-NsT"/>
+                        <outlet property="address" destination="pW5-sc-ebS" id="qoJ-Lf-1hc"/>
+                        <outlet property="email" destination="lCM-h5-L9T" id="lrk-oe-drK"/>
+                        <outlet property="txtMobile" destination="005-Mu-HiQ" id="Tvj-bE-AnB"/>
+                        <outlet property="txtUname" destination="3jO-mk-OcB" id="cN2-7Y-pkp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A8G-lf-ZQT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -255,7 +350,14 @@
             <point key="canvasLocation" x="237" y="361"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="u=1375647250,2440653288&amp;fm=21&amp;gp=0.jpg" width="255" height="220"/>
+        <image name="u=1538967743,1926179619&amp;fm=21&amp;gp=0.jpg" width="391" height="220"/>
+        <image name="u=165953114,3626923254&amp;fm=21&amp;gp=0.jpg" width="238" height="220"/>
+        <image name="u=3454924501,3224996168&amp;fm=21&amp;gp=0.jpg" width="204" height="220"/>
+        <image name="u=4264565251,3634997271&amp;fm=21&amp;gp=0.jpg" width="244" height="220"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cMo-IT-lu8"/>
+        <segue reference="IxC-7t-bks"/>
     </inferredMetricsTieBreakers>
 </document>
